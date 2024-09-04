@@ -4,7 +4,7 @@
 #### 1. Projekthintergrund und -ziele
 #### 2. Layoutideen 
 #### 3. Umsetzung 
-#### 4. Ausführen der Streamlit Webapp
+#### 4. Code
 ***
 # 1. Projekthintergrund und -ziele
 Entwicklung eines interaktiven Studienverlaufsplans: 
@@ -57,7 +57,7 @@ Visualisierung des Modulhandbuchs für den Bachelor Lehramt Sekundarstufe 1
 
 ***
 
-# Layoutideen
+# 2. Layoutideen
 #### 1. Dashboard-Struktur
 
 Bildungswissenschaften, zwei Fächer & Praxis: Die Struktur sollte drei Hauptbereiche enthalten:
@@ -89,7 +89,7 @@ Bildungswissenschaften, zwei Fächer & Praxis: Die Struktur sollte drei Hauptber
 
 ***
 
-# Umsetzung
+# 3. Umsetzung
 
 ### 1. Planung & Datenaufbereitung
 #### Datenmodellierung: 
@@ -100,7 +100,10 @@ Zunächst musst du die Informationen aus dem Modulhandbuch strukturiert erfassen
 
 #### Tools:
 - Eine Excel-Tabelle oder Google Sheets kann zunächst als Basis verwendet werden, um die Module, ihre Inhalte und Verbindungen zu organisieren. Später kannst du die Daten in eine Datenbank überführen.
-  
+
+Hier sind unsere Excel-Tabellen: 
+- [Modulhandbuch](/2020_12_15_MHB_BA_LA_SekI.pdf) und [Modulhandbuch](/2020_12_15_MHB_BA_LA_SekI.pdf) und 
+
 ### 2. Technologieauswahl
 #### Frontend (Benutzeroberfläche)
 - HTML/CSS/JavaScript für eine interaktive Webanwendung.
@@ -165,3 +168,5 @@ Zunächst musst du die Informationen aus dem Modulhandbuch strukturiert erfassen
 #### 1. Frontend: React.js oder Vue.js, Chart.js oder D3.js für Diagramme.
 #### 2. Backend: Node.js mit Express.js, PostgreSQL/MySQL.
 #### 3. Deployment: Netlify/Vercel für das Frontend, Heroku/AWS für das Backend.
+
+# 4. Code 
