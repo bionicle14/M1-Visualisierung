@@ -171,4 +171,6 @@ Zunächst musst du die Informationen aus dem Modulhandbuch strukturiert erfassen
 #### 2. Backend: Node.js mit Express.js, PostgreSQL/MySQL.
 #### 3. Deployment: Netlify/Vercel für das Frontend, Heroku/AWS für das Backend.
 
+*** 
+
 # 4. Code 
