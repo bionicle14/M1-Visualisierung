@@ -1,5 +1,63 @@
 # M1-Visualisierung
+***
+## Table of Contents
+#### 1. Projekthintergrund und -ziele
+#### 2. Layoutideen 
+#### 3. Umsetzung 
+#### 4. Ausführen der Streamlit Webapp
+***
+# 1. Projekthintergrund und -ziele
+Entwicklung eines interaktiven Studienverlaufsplans: 
+Visualisierung des Modulhandbuchs für den Bachelor Lehramt Sekundarstufe 1
 
+#### Projektidee:
+- Entwicklung eines Prototyps zur Visualisierung des Modulhandbuchs für den Bachelorstudiengang Lehramt Sekundarstufe 1.
+- Ziel ist die Erstellung eines interaktiven Studienverlaufsplans, ergänzt durch ein Dashboard zur übersichtlichen Darstellung des Studienfortschritts.
+- Im Anschluss wird der Prototyp im Rahmen von Usability-Tests mit Lehramtsstudierenden evaluiert.
+- Optional erfolgt eine weiterführende Evaluation durch Experteninterviews zur Optimierung des Konzepts.
+ 
+#### Forschungsfrage:
+*Wie kann eine interaktive Visualisierung eines Modulhandbuchs für das Lehramtsstudium (Sekundarstufe 1) gestaltet werden, um den Studierenden eine verbesserte Übersicht über den Studienverlauf zu ermöglichen, und welche Usability-Aspekte sind für die Zielgruppe besonders relevant?* 
+ 
+#### Vorgehensweise:
+##### 1. Literaturrecherche:
+- Analyse bestehender Visualisierungsansätze und Usability-Prinzipien in der Hochschullehre.
+- Untersuchung bereits existierender interaktiver Studienverlaufspläne und Dashboard-Lösungen.
+- Identifikation der besonderen Anforderungen von Lehramtsstudierenden (Sekundarstufe 1).
+ 
+##### 2. Anforderungsanalyse:
+- Interviews oder Umfragen mit Lehramtsstudierenden zur Ermittlung der Bedürfnisse und Herausforderungen im Studium.
+- Analyse der Modulhandbücher und curriculare Anforderungen für das Lehramt Sekundarstufe 1.
+
+#### 3. Prototypenentwicklung:
+- Design und Entwicklung eines interaktiven Studienverlaufsplans, der die Modulhandbücher visualisiert.
+- Implementierung eines Dashboards zur Darstellung von Fortschritt, Modulen und Meilensteinen.
+- Fokussierung auf eine benutzerfreundliche und intuitive Bedienung.
+ 
+##### 4. Usability-Test:
+- Durchführung von Usability-Tests mit Lehramtsstudierenden zur Evaluation des Prototyps.
+- Anwendung von Usability-Methoden wie "Think-Aloud", Eye-Tracking oder heuristische Evaluation.
+- Qualitative und quantitative Auswertung der Usability-Daten.
+ 
+##### 5. Experteninterview (optional):
+- Interviews mit Expert:innen aus den Bereichen Hochschuldidaktik, Usability oder Lehramtsausbildung.
+- Diskussion von Optimierungspotenzialen und Integration von Expertenfeedback in die Weiterentwicklung des Prototyps.
+ 
+##### 6. Analyse und Auswertung:
+- Auswertung der Usability-Tests und der Experteninterviews.
+- Identifikation von Stärken und Schwächen des Prototyps.
+- Empfehlungen zur Weiterentwicklung und Implementierung des Tools in die Praxis.
+ 
+ ####  Wichtige Punkte:
+- Zielgruppe: Lehramtsstudierende und deren spezifische Anforderungen in der Studienorganisation.
+- Usability: Benutzerfreundlichkeit und intuitive Bedienbarkeit des Prototyps sind zentral.
+- Interaktivität: Der Prototyp sollte einen hohen Grad an Interaktivität bieten, um eine flexible und individuelle Studienplanung zu ermöglichen.
+- Visualisierung: Effektive Visualisierung von Modulen, Studienfortschritt und Wahlmöglichkeiten.
+- Feedback: Kontinuierliche Einbindung der Zielgruppe (Studierende) und Expert:innen, um den Prototyp praxisnah zu entwickeln
+
+***
+
+# Layoutideen
 #### 1. Dashboard-Struktur
 
 Bildungswissenschaften, zwei Fächer & Praxis: Die Struktur sollte drei Hauptbereiche enthalten:
