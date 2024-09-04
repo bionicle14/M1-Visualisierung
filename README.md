@@ -174,3 +174,256 @@ Zunächst musst du die Informationen aus dem Modulhandbuch strukturiert erfassen
 *** 
 
 # 4. Code 
+### 1. Frontend mit React.js
+#### 1.1. Initiales Setup
+Um mit React zu starten, kannst du Create React App nutzen:
+```bash 
+npx create-react-app studienverlaufsplan
+cd studienverlaufsplan
+npm start
+```
+#### 1.2. Grundlayout
+Hier erstellen wir eine einfache Struktur, um Module anzuzeigen, die später durch eine dynamische Komponente ersetzt werden.
+```jsx
+// src/App.js
+import React, { useState } from "react";
+import './App.css';
+
+function App() {
+  // Beispielmodule
+  const moduleList = [
+    { name: "Erziehungswissenschaft 1", semester: 1, ects: 6 },
+    { name: "Pädagogische Psychologie 1", semester: 2, ects: 6 },
+    { name: "Deutsch 1", semester: 1, ects: 9 },
+    { name: "Mathematik 1", semester: 1, ects: 9 },
+  ];
+
+  const [selectedModules, setSelectedModules] = useState([]);
+
+  // Modul hinzufügen
+  const addModule = (module) => {
+    setSelectedModules([...selectedModules, module]);
+  };
+
+  return (
+    <div className="App">
+      <h1>Studienverlaufsplan</h1>
+
+      <div className="module-list">
+        <h2>Verfügbare Module</h2>
+        {moduleList.map((module, index) => (
+          <div key={index} className="module-item">
+            <span>{module.name} - {module.ects} ECTS</span>
+            <button onClick={() => addModule(module)}>Hinzufügen</button>
+          </div>
+        ))}
+      </div>
+
+      <div className="selected-modules">
+        <h2>Ausgewählte Module</h2>
+        {selectedModules.length > 0 ? (
+          selectedModules.map((module, index) => (
+            <div key={index}>
+              <span>{module.name} - {module.semester}. Semester - {module.ects} ECTS</span>
+            </div>
+          ))
+        ) : (
+          <p>Noch keine Module ausgewählt</p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```
+#### 1.3. CSS zur Darstellung
+Ein einfaches Styling mit CSS zur besseren Darstellung:
+```css
+/* src/App.css */
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.module-list, .selected-modules {
+  margin-top: 20px;
+}
+
+.module-item {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+```
+### 2. Backend mit Node.js und Express
+#### 2.1. Grundlegendes Setup für Node.js
+
+```bash
+mkdir backend
+cd backend
+npm init -y
+npm install express cors
+```
+
+### 2.2. Server einrichten
+Erstelle eine server.js-Datei für dein Backend:
+```javascript
+// backend/server.js
+const express = require("express");
+const cors = require("cors");
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+// Beispiel-Daten
+let moduleList = [
+  { id: 1, name: "Erziehungswissenschaft 1", semester: 1, ects: 6 },
+  { id: 2, name: "Pädagogische Psychologie 1", semester: 2, ects: 6 },
+  { id: 3, name: "Deutsch 1", semester: 1, ects: 9 },
+  { id: 4, name: "Mathematik 1", semester: 1, ects: 9 },
+];
+
+// API-Endpunkte
+app.get("/modules", (req, res) => {
+  res.json(moduleList);
+});
+
+// Server starten
+app.listen(5000, () => {
+  console.log("Server läuft auf Port 5000");
+});
+```
+
+Starte den Server mit:
+```bash
+node server.js
+```
+### 3. Frontend mit Backend verbinden
+#### 3.1. Module von der API laden
+Passe nun das Frontend an, um die Module von der API zu laden, anstatt sie lokal im State zu definieren.
+```jsx
+// src/App.js
+import React, { useState, useEffect } from "react";
+import './App.css';
+
+function App() {
+  const [moduleList, setModuleList] = useState([]);
+  const [selectedModules, setSelectedModules] = useState([]);
+
+  // API-Daten laden
+  useEffect(() => {
+    fetch("http://localhost:5000/modules")
+      .then((response) => response.json())
+      .then((data) => setModuleList(data));
+  }, []);
+
+  // Modul hinzufügen
+  const addModule = (module) => {
+    setSelectedModules([...selectedModules, module]);
+  };
+
+  return (
+    <div className="App">
+      <h1>Studienverlaufsplan</h1>
+
+      <div className="module-list">
+        <h2>Verfügbare Module</h2>
+        {moduleList.map((module) => (
+          <div key={module.id} className="module-item">
+            <span>{module.name} - {module.ects} ECTS</span>
+            <button onClick={() => addModule(module)}>Hinzufügen</button>
+          </div>
+        ))}
+      </div>
+
+      <div className="selected-modules">
+        <h2>Ausgewählte Module</h2>
+        {selectedModules.length > 0 ? (
+          selectedModules.map((module, index) => (
+            <div key={index}>
+              <span>{module.name} - {module.semester}. Semester - {module.ects} ECTS</span>
+            </div>
+          ))
+        ) : (
+          <p>Noch keine Module ausgewählt</p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```
+
+### 4. Fortschritt und ECTS-Berechnung
+Füge nun eine automatische Berechnung der ECTS-Punkte hinzu, die die Studierenden sammeln:
+
+```jsx
+// src/App.js
+import React, { useState, useEffect } from "react";
+import './App.css';
+
+function App() {
+  const [moduleList, setModuleList] = useState([]);
+  const [selectedModules, setSelectedModules] = useState([]);
+  const [totalECTS, setTotalECTS] = useState(0);
+
+  // API-Daten laden
+  useEffect(() => {
+    fetch("http://localhost:5000/modules")
+      .then((response) => response.json())
+      .then((data) => setModuleList(data));
+  }, []);
+
+  // Modul hinzufügen
+  const addModule = (module) => {
+    setSelectedModules([...selectedModules, module]);
+    setTotalECTS(totalECTS + module.ects);
+  };
+
+  return (
+    <div className="App">
+      <h1>Studienverlaufsplan</h1>
+
+      <div className="module-list">
+        <h2>Verfügbare Module</h2>
+        {moduleList.map((module) => (
+          <div key={module.id} className="module-item">
+            <span>{module.name} - {module.ects} ECTS</span>
+            <button onClick={() => addModule(module)}>Hinzufügen</button>
+          </div>
+        ))}
+      </div>
+
+      <div className="selected-modules">
+        <h2>Ausgewählte Module</h2>
+        {selectedModules.length > 0 ? (
+          <>
+            {selectedModules.map((module, index) => (
+              <div key={index}>
+                <span>{module.name} - {module.semester}. Semester - {module.ects} ECTS</span>
+              </div>
+            ))}
+            <h3>Gesamt ECTS: {totalECTS}</h3>
+          </>
+        ) : (
+          <p>Noch keine Module ausgewählt</p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```
+### 5. Erweiterung: Drag-and-Drop
+Für die semestergliederten Module kannst du eine Drag-and-Drop-Funktionalität mit React DnD hinzufügen. Das Modul-Layout wird dabei in Semestern organisiert.
+
+
+
