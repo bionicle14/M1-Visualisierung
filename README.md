@@ -96,6 +96,7 @@ Zunächst musst du die Informationen aus dem Modulhandbuch strukturiert erfassen
 
 #### 6. Testen und Feedback
 - Benutzerfreundlichkeit testen: Lade Studierende ein, das Dashboard zu testen und sammle Feedback, um die Benutzerführung zu verbessern.
+-       https://www.usability.de/leistungen/methoden.html
 - Automatische Tests: Entwickle Tests für die korrekte Berechnung von ECTS-Punkten und Workload, sowie die ordnungsgemäße Abbildung der Modulabhängigkeiten.
 
 #### 7. Iterative Entwicklung
