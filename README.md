@@ -11,7 +11,7 @@ Entwicklung eines interaktiven Studienverlaufsplans:
 Visualisierung des Modulhandbuchs für den Bachelor Lehramt Sekundarstufe 1
 
 #### Projektidee:
-- Entwicklung eines Prototyps zur Visualisierung des Modulhandbuchs für den Bachelorstudiengang Lehramt Sekundarstufe 1 2020_12_15_MHB_BA_LA_SekI.pdf.
+- Entwicklung eines Prototyps zur Visualisierung des Modulhandbuchs für den Bachelorstudiengang Lehramt Sekundarstufe 1  [Modulhandbuch](/2020_12_15_MHB_BA_LA_Sek.pdf) 
 - Ziel ist die Erstellung eines interaktiven Studienverlaufsplans, ergänzt durch ein Dashboard zur übersichtlichen Darstellung des Studienfortschritts.
 - Im Anschluss wird der Prototyp im Rahmen von Usability-Tests mit Lehramtsstudierenden evaluiert.
 - Optional erfolgt eine weiterführende Evaluation durch Experteninterviews zur Optimierung des Konzepts.
