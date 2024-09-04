@@ -102,7 +102,7 @@ Zunächst musst du die Informationen aus dem Modulhandbuch strukturiert erfassen
 - Eine Excel-Tabelle oder Google Sheets kann zunächst als Basis verwendet werden, um die Module, ihre Inhalte und Verbindungen zu organisieren. Später kannst du die Daten in eine Datenbank überführen.
 
 Hier sind unsere Excel-Tabellen: 
-- [Modulhandbuch](/2020_12_15_MHB_BA_LA_SekI.pdf) und [Modulhandbuch](/2020_12_15_MHB_BA_LA_SekI.pdf) und 
+[Modul Lerninhalte und Kompetenzen](/Modul_Lerninhalte_Kompetenzen.xlsx) und [Modulhandbuch aufbereitet](/Modulhandbuch_V2.xlsx)
 
 ### 2. Technologieauswahl
 #### Frontend (Benutzeroberfläche)
