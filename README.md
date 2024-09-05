@@ -68,7 +68,7 @@ Bildungswissenschaften, zwei Fächer & Praxis: Die Struktur sollte drei Hauptber
 #### 2. Hauptfunktionen
 - Studienplan-Generator: Studierende wählen die zwei Fächer, die sie studieren möchten, und das Dashboard generiert automatisch einen passenden Studienverlaufsplan, der die Pflichtmodule der Bildungswissenschaften sowie die gewählten Fächer enthält.
 - Zeitplanung: Ein Semesterplaner zeigt, in welchem Semester welche Module belegt werden müssen, basierend auf der Modulverteilung (z.B. 1. Semester: Erziehungswissenschaften, 2. Semester: Einführung in die Pädagogische Psychologie, 3. Semester: Fachdidaktik für das gewählte Fach).
-- ECTS-Punkte-Anzeige: Das Dashboard berechnet automatisch die gesammelten ECTS-Punkte und zeigt an, wie viele noch benötigt werden.
+- ECTS-Punkte-Anzeige: Das Dashboard berechnet automatisch die gesammelten ECTS-Punkte und zeigt an, wie viele noch benötigt werden. (Info hierzu: Funktion einbauen, dass ab 90 ECTS die Bachelorarbeit angemeldet werden kann).
 - Semesterübersicht: Zeigt eine Übersicht der zu belegenden Module pro Semester an, basierend auf den gewählten Fächern und den Bildungswissenschaften.
 - Pflichtmodule vs. Wahlmodule: Eine klare Unterscheidung zwischen Pflichtmodulen und Wahlpflichtmodulen (wie z.B. Wahlseminare in den Bildungswissenschaften oder in den Fachbereichen).
 
