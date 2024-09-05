@@ -87,6 +87,7 @@ Bildungswissenschaften, zwei Fächer & Praxis: Die Struktur sollte drei Hauptber
 #### 6. Dynamische Anpassung für Wahlfächer
 - Wenn ein Benutzer das Fach oder die gewählten Wahlpflichtmodule ändert, passt sich der Studienverlaufsplan automatisch an, um die neuen Anforderungen zu berücksichtigen.
 
+Hier sind einige Ideen, wie das Dashboard aussehen könnte: [Dashboard Idee](/Dashboard.pdf)
 ***
 
 # 3. Umsetzung
